@@ -1,0 +1,16 @@
+{
+  "name": "component-test",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "tsc": "lerna run tsc",
+    "lpublish": "lerna run tsc && lerna publish --no-private -y"
+  },
+  "devDependencies": {
+    "lerna": "^6.4.0"
+  }
+}
