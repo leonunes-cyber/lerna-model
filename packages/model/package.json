@@ -1,6 +1,6 @@
 {
   "name": "@cyber_leo/model-test",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "version": "1.0.0",
   "private": false,
   "license": "MIT",
