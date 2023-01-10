@@ -5,7 +5,7 @@
   "private": false,
   "license": "MIT",
   "publishConfig": {
-    "@cyber_leo:registry": "https://npm.pkg.github.com"
+    "@cyber_leo:registry": "https://npm.pkg.github.com/cyber_leo"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -20,5 +20,6 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "gitHead": "ad7c6d102a2696b091ce031c6cb4d3273fe3853a"
 }
