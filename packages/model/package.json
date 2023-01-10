@@ -1,7 +1,7 @@
 {
   "name": "@cyber_leo/model-test",
   "main": "lib/index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "license": "MIT",
   "publishConfig": {
@@ -14,7 +14,9 @@
   "directories": {
     "lib": "lib"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "react": "^18.2.0",
     "styled-components": "^5.3.6"
