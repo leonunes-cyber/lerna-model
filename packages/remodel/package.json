@@ -5,7 +5,7 @@
   "private": false,
   "license": "MIT",
   "publishConfig": {
-    "@cyber_leo:registry": "https://npm.pkg.github.com/cyber_leo"
+    "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -20,5 +20,6 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "gitHead": "ab58523a7b6da962a92d19a3d1638d69d5cbd2be"
 }
