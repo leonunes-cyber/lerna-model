@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
-export const ModelDiv = styled.div`
-  background-color: green;
+type ModelProps = {
+  bg?: string
+}
+
+export const ModelDiv = styled.div<ModelProps>`
+  background-color: ${({bg}) => bg ? bg : 'yellow' };
 `

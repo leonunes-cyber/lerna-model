@@ -8,16 +8,24 @@
   ],
   "scripts": {
     "tsc": "lerna run tsc",
-    "lpublish": "lerna run tsc && lerna publish --no-private -y"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "styled-components": "^5.3.6"
+    "lpublish": "lerna run tsc && lerna publish --no-private -y",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "lerna": "^6.4.0",
     "@types/react": "^18.0.26",
     "@types/styled-components": "^5.1.26",
+    "@babel/core": "^7.20.12",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack4": "^6.5.15",
+    "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
     "typescript": "^4.9.4"
   }
 }
