@@ -1,8 +1,8 @@
 name: Publish
 
 on:
-  pull_requests:
-    types: [closed]
+  branch:
+    qa
 
 jobs:
   publish:
