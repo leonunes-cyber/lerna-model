@@ -31,8 +31,8 @@ jobs:
         npm set "//npm.pkg.github.com/:_authToken=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"
 
     - name: "Version and publish" # Interesting step
-      with:
-        token: ${{ secrets.GIT_TOKEN }}
+      env:
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@cybergenios.com.br"
