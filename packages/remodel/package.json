@@ -1,7 +1,7 @@
 {
   "name": "@cyber_leo/remodel",
   "main": "lib/index.js",
-  "version": "2.0.7",
+  "version": "2.1.0-alpha.0+c525dd8",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -24,5 +24,5 @@
   "files": [
     "lib"
   ],
-  "gitHead": "e1a54b6a0d0004553a4f64109d8c9f20c66466d1"
+  "gitHead": "c525dd8bd8dbd37987953aed197447b2922ee38f"
 }
