@@ -1,14 +1,13 @@
 {
   "name": "@cyber_leo/model-test",
   "main": "lib/index.js",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "private": false,
   "license": "MIT",
   "repository": {
     "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
   },
-    "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber"
-  ,
+  "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
