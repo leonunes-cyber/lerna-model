@@ -32,7 +32,7 @@ jobs:
 
     - name: "Version and publish" # Interesting step
       env:
-        GH_TOKEN: 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
+        GH_TOKEN: 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
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@cybergenios.com.br"
