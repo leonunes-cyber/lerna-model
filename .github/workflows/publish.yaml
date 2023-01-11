@@ -34,6 +34,7 @@ jobs:
       env:
         GH_TOKEN: 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
       run: |
+        echo ${{ GH_TOKEN }}
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@cybergenios.com.br"
         npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes && npx lerna publish -no-push from-git --yes
