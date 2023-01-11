@@ -7,7 +7,8 @@
     "publish": {
       "registry": "https://npm.pkg.github.com/leonunes-cyber",
       "yes": true,
-      "verifyAccess": false
+      "verifyAccess": false,
+      "ignoreChanges": []
     }
   }
 }
