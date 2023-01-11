@@ -7,33 +7,19 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
- 
-  
+    runs-on: ubuntu-18.04
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
-    - name: "Use NodeJS 16"
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: "test" # Interesting step
-      run: ls
-
-
-    - name: "Setup npm"
-      run: |
-        npm set @leonunes-cyber:registry=https://npm.pkg.github.com
-        npm set "//npm.pkg.github.com/:_authToken=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"
-
-    - name: "Version and publish" # Interesting step
-      with:
-        token: ${{ secrets.GIT_TOKEN }}
-      run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor}}@cybergenios.com.br"
-        npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes && npx lerna publish -no-push from-git --yes
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: |
+          yarn install
+      - uses: smartlyio/lerna-publish-action@v2
+        with:
+          bump: major
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
