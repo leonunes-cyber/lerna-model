@@ -4,6 +4,9 @@
   "version": "1.0.12",
   "private": false,
   "license": "MIT",
+  "repository": {
+    "url": "https://www.npmjs.com/package/@cyber_leo/remodel"
+  },
   "publishConfig": {
     "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber"
   },
@@ -21,5 +24,5 @@
   "files": [
     "lib"
   ],
-  "gitHead": "9858e97cfa28be7d8d87af84f23c0d08f36d24fd"
+  "gitHead": "30349cbb55a8a7d2d1d6a899bd439455d67f7700"
 }

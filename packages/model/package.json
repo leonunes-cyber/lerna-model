@@ -4,9 +4,11 @@
   "version": "1.0.13",
   "private": false,
   "license": "MIT",
-  "publishConfig": {
-    "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber"
+  "repository": {
+    "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
   },
+    "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber"
+  ,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,5 +23,5 @@
   "files": [
     "lib"
   ],
-  "gitHead": "9858e97cfa28be7d8d87af84f23c0d08f36d24fd"
+  "gitHead": "30349cbb55a8a7d2d1d6a899bd439455d67f7700"
 }
