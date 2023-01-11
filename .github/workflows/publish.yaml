@@ -8,7 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
+ 
+  
     steps:
     - name: "Checkout"
       uses: actions/checkout@v3
@@ -19,11 +20,20 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16'
-    - uses: smartlyio/lerna-publish-action@v2
-      with:
-        bump: major
-        registry: "https://npm.pkg.github.com/leonunes-cyber"
+
+    - name: "test" # Interesting step
+      run: ls
+
+
+    - name: "Setup npm"
+      run: |
+        npm set @leonunes-cyber:registry=https://npm.pkg.github.com
+        npm set "//npm.pkg.github.com/:_authToken=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"
+
+    - name: "Version and publish" # Interesting step
       env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        AUTH_TOKEN_STRING: ${{ format('//npm.pkg.github.com/:_authToken={0}', secrets.GIT_TOKEN) }}
-        GIT_DEPLOY_KEY: ${{ secrets.GIT_TOKEN }}
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor}}@cybergenios.com.br"
+        npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes && npx lerna publish -no-push --yes
