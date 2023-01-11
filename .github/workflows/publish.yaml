@@ -21,6 +21,9 @@ jobs:
       with:
         node-version: '16'
 
+    - name: "test" # Interesting step
+      run: ls
+
     - name: "Version and publish" # Interesting step
       env:
         GH_TOKEN: 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
