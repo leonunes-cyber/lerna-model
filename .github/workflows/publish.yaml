@@ -27,4 +27,7 @@ jobs:
     - name: "Version and publish" # Interesting step
       env:
         GH_TOKEN: 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
-      run: npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes && npx lerna publish from-git --yes
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor}}@cybergenios.com.br"
+        npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes && npx lerna publish from-git --yes
