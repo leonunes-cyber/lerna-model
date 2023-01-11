@@ -22,8 +22,7 @@ jobs:
     - uses: smartlyio/lerna-publish-action@v2
       with:
         bump: major
-          registry: "https://npm.pkg.github.com/leonunes-cyber"
-
+        registry: "https://npm.pkg.github.com/leonunes-cyber"
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         AUTH_TOKEN_STRING: ${{ format('//npm.pkg.github.com/:_authToken={0}', secrets.GIT_TOKEN) }}
