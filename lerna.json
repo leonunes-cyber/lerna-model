@@ -5,7 +5,9 @@
   "version": "independent",
   "command": {
     "publish": {
-      "registry": "https://npm.pkg.github.com/leonunes-cyber"
+      "registry": "https://npm.pkg.github.com/leonunes-cyber",
+      "yes": true,
+      "noVerifyAccess": true
     }
   }
 }
