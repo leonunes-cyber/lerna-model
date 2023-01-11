@@ -7,7 +7,7 @@
   "repository": {
     "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
   },
-  "@cyber_leo:registry": "https://npm.pkg.github.com/leonunes-cyber",
+  "@cyber_leo:registry": "https://npm.pkg.github.com/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,5 +22,5 @@
   "files": [
     "lib"
   ],
-  "gitHead": "30349cbb55a8a7d2d1d6a899bd439455d67f7700"
+  "gitHead": "ae7e9f3daeded21c4f637f5b2ebc37c58cb5f2c9"
 }
