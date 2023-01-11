@@ -24,8 +24,3 @@ jobs:
     - name: Install dependencies
       run: |
         yarn install
-    - uses: smartlyio/lerna-publish-action@v2
-      with:
-        bump: major
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
