@@ -24,6 +24,12 @@ jobs:
     - name: "test" # Interesting step
       run: ls
 
+
+    - name: "Setup npm"
+      run: |
+        npm set @leonunes-cyber:registry=https://npm.pkg.github.com
+        npm set "//npm.pkg.github.com/:_authToken=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"
+
     - name: "Version and publish" # Interesting step
       env:
         GH_TOKEN: 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
