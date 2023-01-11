@@ -28,7 +28,7 @@ jobs:
     - name: "Setup npm"
       run: |
         npm set @cyber_leo:registry=https://registry.npmjs.org
-        npm set "//registry.npmjs.org/:_authToken=${{ NPM_AUTH_TOKEN }}"
+        npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
 
     - name: "Version and publish" # Interesting step
       env:
