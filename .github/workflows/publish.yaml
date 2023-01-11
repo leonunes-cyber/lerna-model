@@ -19,13 +19,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16'
-
-    - name: "publish"
-      run: |
-        npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
-
     - uses: smartlyio/lerna-publish-action@v2
       with:
         bump: major
+          registry: "https://npm.pkg.github.com/leonunes-cyber"
+
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
