@@ -7,9 +7,6 @@
   "repository": {
     "url": "https://www.npmjs.com/package/@cyber_leo/remodel"
   },
-  "publishConfig": {
-    "@leonunes-cyber:registry": "https://npm.pkg.github.com/leonunes-cyber"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,5 +21,5 @@
   "files": [
     "lib"
   ],
-  "gitHead": "b521624ad7c5288bd108de2d9bb6289c40be2783"
+  "gitHead": "7b703b2f62d873772534fa69a4527e93c8fedff7"
 }
