@@ -38,4 +38,4 @@ jobs:
         git config user.email "${{ github.actor}}@cybergenios.com.br"
         npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --preid beta --yes
         git commit -am "new version"
-        npx lerna publish from-git --yes
+        npx lerna publish from-package --yes
