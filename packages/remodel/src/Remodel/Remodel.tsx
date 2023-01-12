@@ -8,4 +8,4 @@ type RemodelProps = {
 
 export const Remodel = ({ name, bg }: RemodelProps) => {
   return <ModelDiv bg={bg}>Remodel { name }</ModelDiv>
-} 
+}
