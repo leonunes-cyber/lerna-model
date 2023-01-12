@@ -35,6 +35,7 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@cybergenios.com.br"
+        npx lerna run tsc
         npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --preid beta --yes
         git commit -am "new version"
         npx lerna publish from-package --yes
