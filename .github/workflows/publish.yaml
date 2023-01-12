@@ -38,4 +38,4 @@ jobs:
         yarn
         npx lerna run tsc
         npx lerna version --conventional-commits -y
-        npx lerna publish from-git --yes
+        npx lerna publish from-package --yes
