@@ -1,32 +1,51 @@
 name: Publish
 
 on:
-  push:
-    branch:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
       - qa
+
+permissions:
+ contents: write
+ pull-requests: write
+ repository-projects: write
 
 jobs:
   publish:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
-  steps:
-    uses: actions/checkout@v3
-    uses: actions/setup-node@v3
-    with:
-      node-version: 16
-      registry-url: https://npm.pkg.github.com/
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
-  name: "Setup npm"
-  run: |
-    npm set @cyber_leo:registry=https://npm.pkg.github.com
-    npm set "//npm.pkg.github.com/:_authToken=${{ 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 }}"
+    - name: "Use NodeJS 16"
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
 
-  env:
-    GH_TOKEN: ${{ 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 }}
-  run: |
-    git config user.name "${{ github.actor }}"
-    git config user.email "${{ github.actor}}@users.noreply.github.com"
+    - name: "test"
+      run: ls
 
-    npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
 
-    npx lerna publish from-git --yes
+    - name: "Setup npm"
+      run: |
+        npm set @cyber_leo:registry=https://registry.npmjs.org
+        npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
+
+    - name: "Version and publish"
+      env:
+        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor}}@cybergenios.com.br"
+        yarn
+        npx lerna run tsc
+        npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --yes
+        git commit -am "new version"
+        git push origin main
+        npx lerna publish from-package --yes

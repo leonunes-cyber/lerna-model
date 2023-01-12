@@ -7,5 +7,5 @@ type RemodelProps = {
 }
 
 export const Remodel = ({ name, bg }: RemodelProps) => {
-  return <ModelDiv bg={bg}>Remosdelso d-- { name }</ModelDiv>
-} 
+  return <ModelDiv bg={bg}>Remodelos { name }</ModelDiv>
+}
