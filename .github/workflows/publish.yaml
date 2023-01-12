@@ -1,8 +1,10 @@
 name: Publish
 
 on:
-  push:
-    branch:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
       - qa
 
 permissions:
@@ -12,6 +14,7 @@ permissions:
 
 jobs:
   publish:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +45,7 @@ jobs:
         git config user.email "${{ github.actor}}@cybergenios.com.br"
         yarn
         npx lerna run tsc
-        npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --preid beta --yes
+        npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --yes
         git commit -am "new version"
-        git push origin qa
+        git push origin main
         npx lerna publish from-package --yes
