@@ -43,4 +43,6 @@ jobs:
         yarn
         npx lerna run tsc
         npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --preid beta --yes
-        npx lerna publish --yes
+        git commit -am "new version"
+        git push origin qa
+        npx lerna publish from-package --yes
