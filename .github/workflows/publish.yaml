@@ -37,6 +37,4 @@ jobs:
         git config user.email "${{ github.actor}}@cybergenios.com.br"
         yarn
         npx lerna run tsc
-        npx lerna version --no-git-tag-version --conventional-commits --conventional-prerelease --preid beta --yes
-        git commit -am "new version package"
-        npx lerna publish --yes
+        npx lerna publish --canary --preid beta --yes
