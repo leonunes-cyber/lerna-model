@@ -42,4 +42,4 @@ jobs:
         npx lerna version patch --no-git-tag-version --yes
         git commit -am "new version"
         git push origin qa
-        npx lerna publish --no-private from-package --yes
+        npx lerna publish from-package --yes
