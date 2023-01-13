@@ -1,11 +1,9 @@
 name: Publish
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
-      - main
-      - qa
+      - teste-ci
 
 permissions:
  contents: write
@@ -47,5 +45,5 @@ jobs:
         npx lerna run tsc
         npx lerna version patch --no-git-tag-version --yes
         git commit -am "new version"
-        git push origin main
+        git push origin teste-ci
         npx lerna publish from-package --yes
