@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.19](https://github.com/leonunes-cyber/lerna-model/compare/@cyber_leo/remodel@2.2.18...@cyber_leo/remodel@2.2.19) (2023-01-13)
+
+**Note:** Version bump only for package @cyber_leo/remodel
+
+
+
+
+
 ## [2.2.18](https://github.com/leonunes-cyber/lerna-model/compare/@cyber_leo/remodel@2.2.17...@cyber_leo/remodel@2.2.18) (2023-01-13)
 
 **Note:** Version bump only for package @cyber_leo/remodel
