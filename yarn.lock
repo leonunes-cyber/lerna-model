@@ -1173,7 +1173,7 @@
 
 "@cyber_leo/model-test@file:/home/runner/work/lerna-model/lerna-model/packages/model":
   "resolved" "file:packages/model"
-  "version" "3.1.4-dev.16+b7fc23d"
+  "version" "3.1.4"
   dependencies:
     "react" "^18.2.0"
     "react-dom" "^18.2.0"
@@ -1181,7 +1181,7 @@
 
 "@cyber_leo/remodel@file:/home/runner/work/lerna-model/lerna-model/packages/remodel":
   "resolved" "file:packages/remodel"
-  "version" "2.2.10"
+  "version" "2.2.11"
   dependencies:
     "react" "^18.2.0"
     "react-dom" "^18.2.0"
