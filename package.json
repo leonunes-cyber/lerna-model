@@ -9,7 +9,7 @@
   "scripts": {
     "tsc": "lerna run tsc",
     "sprelpublish": "lerna run tsc && lerna version --conventional-commits -y",
-    "lpublish": "tsc && lerna publish",
+    "lpublish": "lerna run tsc && lerna publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
