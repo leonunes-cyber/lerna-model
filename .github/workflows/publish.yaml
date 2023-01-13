@@ -5,6 +5,11 @@ on:
     branches:
       - teste-ci
 
+permissions:
+ contents: write
+ pull-requests: write
+ repository-projects: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
