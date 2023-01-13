@@ -5,14 +5,8 @@ on:
     branches:
       - teste-ci
 
-permissions:
- contents: write
- pull-requests: write
- repository-projects: write
-
 jobs:
   publish:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
