@@ -37,7 +37,7 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "${{ github.actor}}@cybergenios.com.br"
-        yarn
+        npm i
         npx lerna run tsc
         npx lerna version patch --no-git-tag-version --yes
         git commit -am "new version"
