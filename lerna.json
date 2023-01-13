@@ -3,11 +3,6 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:leonunes-cyber/lerna-model.git",
-    "directory": "packages/example"
-  },
   "command": {
     "publish": {
       "registry": "https://npm.pkg.github.com/leonunes-cyber"
