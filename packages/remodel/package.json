@@ -1,12 +1,9 @@
 {
   "name": "@cyber_leo/remodel",
   "main": "lib/index.js",
-  "version": "2.2.1",
+  "version": "2.2.8",
   "private": false,
   "license": "MIT",
-  "repository": {
-    "url": "https://www.npmjs.com/package/@cyber_leo/remodel"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
