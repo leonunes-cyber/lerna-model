@@ -7,10 +7,7 @@ on:
       - main
       - qa
 
-permissions:
- contents: write
- pull-requests: write
- repository-projects: write
+permissions: write-all
 
 jobs:
   publish:
@@ -48,4 +45,4 @@ jobs:
         npx lerna version patch --no-git-tag-version --yes
         git commit -am "new version"
         git push origin main
-        npx lerna publish from-package --yes
+        npx lerna publish --no-private from-package --yes

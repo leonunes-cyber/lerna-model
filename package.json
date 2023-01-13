@@ -1,6 +1,6 @@
 {
   "name": "@cyber_leo/component-test",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "license": "MIT",
   "workspaces": [
@@ -8,7 +8,12 @@
   ],
   "scripts": {
     "tsc": "lerna run tsc",
+<<<<<<< HEAD
     "lpublish": "lerna run tsc && lerna publish --canary --preid dev",
+=======
+    "prelpublish": "lerna run tsc && lerna version --conventional-commits -y",
+    "lpublish": "lerna publish from-package --no-private -y",
+>>>>>>> 8be0073bade30b2856ea5693f867466e448dd3b2
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
