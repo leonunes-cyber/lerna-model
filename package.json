@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "tsc": "lerna run tsc",
-    "prelpublish": "lerna run tsc && lerna version --conventional-commits -y",
-    "lpublish": "lerna publish from-package",
+    "lpublish": "lerna run tsc && lerna publish --canary --preid dev",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
