@@ -1,0 +1,22 @@
+{
+  "name": "@cyber_leo/model-test2",
+  "main": "lib/index.js",
+  "version": "3.2.10",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "gitHead": "b521624ad7c5288bd108de2d9bb6289c40be2783"
+}
