@@ -11,7 +11,7 @@
   },
   "scripts": {
     "tsc": "lerna run tsc",
-    "lpublish": "lerna run tsc && lerna publish --canary --preid dev",
+    "lpublish": "lerna run tsc && lerna publish --canary",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
