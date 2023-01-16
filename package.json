@@ -1,6 +1,6 @@
 {
   "name": "@cyber_leo/component-test",
-  "private": false,
+  "private": true,
   "version": "1.0.0",
   "license": "MIT",
   "workspaces": [
