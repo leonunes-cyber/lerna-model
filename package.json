@@ -6,6 +6,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "tsc": "lerna run tsc",
     "prelspublish": "lerna run tsc",
