@@ -3,7 +3,10 @@ name: Publish Beta
 on:
   push:
     branches:
-      - "*"
+      includes:
+        - "*"
+      exclude:
+        - main
 permissions: write-all
 jobs:
   publish:
@@ -18,8 +21,9 @@ jobs:
         with:
           node-version: "16"
       - name: Setup npm
-        run: |
+        run: >
           npm set @cyber_leo:registry=https://registry.npmjs.org
+
           npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
       - name: Version and publish beta
         env:
