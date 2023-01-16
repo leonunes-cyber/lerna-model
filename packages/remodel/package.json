@@ -4,8 +4,8 @@
   "version": "2.2.7",
   "private": false,
   "license": "MIT",
-  "repository": {
-    "url": "https://www.npmjs.com/package/@cyber_leo/remodel"
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "react": "^18.2.0",

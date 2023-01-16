@@ -8,7 +8,7 @@
     "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
   },
   "publishConfig": {
-    "@leonunes-cyber:registry": "https://npm.pkg.github.com/leonunes-cyber"
+    "access": "public"
   },
   "dependencies": {
     "react": "^18.2.0",
