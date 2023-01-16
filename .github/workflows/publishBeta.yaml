@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - "*"
+      - '!master'
 permissions: write-all
 jobs:
   publish:
-    if: github.event.pull_request.merged == false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
