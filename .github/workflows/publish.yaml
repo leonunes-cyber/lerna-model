@@ -1,48 +1,41 @@
+---
 name: Publish
-
 on:
   push:
     branches:
       - teste-ci
-
 permissions:
- contents: write
- pull-requests: write
- repository-projects: write
-
+  contents: write
+  pull-requests: write
+  repository-projects: write
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Use NodeJS 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: test
+        run: ls
+      - name: Setup npm
+        run: >
+          npm set @cyber_leo:registry=https://registry.npmjs.org
 
-    - name: "Use NodeJS 16"
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: "test"
-      run: ls
-
-
-    - name: "Setup npm"
-      run: |
-        npm set @cyber_leo:registry=https://registry.npmjs.org
-        npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
-
-    - name: "Version and publish"
-      env:
-        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
-      run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor}}@cybergenios.com.br"
-        yarn
-        npx lerna run tsc
-        npx lerna version patch --no-git-tag-version --yes
-        git commit -am "new version"
-        git push origin teste-ci
-        npx lerna publish from-package --yes
+          npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
+      - name: Version and publish
+        env:
+          GH_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@cybergenios.com.br"
+          yarn
+          npx lerna run tsc
+          npx lerna version patch --no-git-tag-version --yes
+          git commit -am "new version"
+          git push origin teste-ci
+          npx lerna publish from-package --yes
