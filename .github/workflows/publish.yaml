@@ -1,14 +1,15 @@
 ---
 name: Publish
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
-    - "*"
-
+      - "*"
 permissions: write-all
-
 jobs:
   publish:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,35 +22,17 @@ jobs:
           node-version: "16"
       - name: Setup npm
         run: >
-          npm set @cyber_leo:registry=https://registry.npmjs.org
-
-          npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
+          npm set @cyber_leo:registry=https://registry.npmjs.org npm set
+          "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
       - name: Version and publish
         env:
           GH_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor}}@cybergenios.com.br"
-
           yarn
           npx lerna run tsc
           npx lerna version patch --no-git-tag-version --yes
-
-
-    - name: "Setup npm"
-      run: |
-        npm set @cyber_leo:registry=https://registry.npmjs.org
-        npm set "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}"
-
-    - name: "Version and publish"
-      env:
-        GH_TOKEN: ${{ secrets.GIT_TOKEN }}
-      run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "${{ github.actor}}@cybergenios.com.br"
-        npm i
-        npx lerna run tsc
-        npx lerna version patch --no-git-tag-version --yes
-        git commit -am "new version"
-        git push origin qa
-        npx lerna publish from-package --yes
+          git commit -am "new version"
+          git push origin main
+          npx lerna publish from-package --yes
