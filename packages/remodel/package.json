@@ -4,6 +4,9 @@
   "version": "2.2.12",
   "private": false,
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
