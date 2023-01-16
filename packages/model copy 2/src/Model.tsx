@@ -2,5 +2,5 @@ import * as React from "react"
 import { ModelDiv } from "./Model.styles"
 
 export const Model = () => {
-  return <ModelDiv>Modelo 2</ModelDiv>
+  return <ModelDiv>Modelo 22</ModelDiv>
 }
