@@ -1,1 +1,0 @@
-export { NewModel } from './NewModel'
