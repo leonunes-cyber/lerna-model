@@ -1,7 +1,7 @@
 {
-  "name": "@cyber_leo/modelo",
+  "name": "@cyber_leo/new-model",
   "main": "lib/index.js",
-  "version": "0.0.6",
+  "version": "0.0.1",
   "private": false,
   "license": "MIT",
   "repository": {

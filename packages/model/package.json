@@ -1,9 +1,15 @@
 {
   "name": "@cyber_leo/model-test",
   "main": "lib/index.js",
-  "version": "3.2.12",
+  "version": "4.20.17",
   "private": false,
   "license": "MIT",
+  "repository": {
+    "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
