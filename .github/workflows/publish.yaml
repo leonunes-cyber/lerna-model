@@ -1,5 +1,5 @@
 ---
-name: Publish Beta
+name: Publish
 on:
   pull_request:
     types:
