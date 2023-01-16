@@ -2,5 +2,6 @@ import styled from "styled-components";
 
 export const ModelDiv = styled.div`
   background-color: red;
-  color: gray;
+  border: 1px black solid;
+  color: blue;
 `
