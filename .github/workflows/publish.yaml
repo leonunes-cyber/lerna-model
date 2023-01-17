@@ -34,5 +34,5 @@ jobs:
           npx lerna run tsc
           npx lerna version patch --no-git-tag-version --yes
           git commit -am "new version"
-          git push origin main
+          git push origin master
           npx lerna publish from-package --yes
