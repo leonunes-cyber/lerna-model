@@ -31,6 +31,4 @@ jobs:
           yarn
           npx lerna run tsc
           npx lerna publish prepatch --preid dev -y
-          git add .
-          git commit -m "new beta version"
           git push origin qa
