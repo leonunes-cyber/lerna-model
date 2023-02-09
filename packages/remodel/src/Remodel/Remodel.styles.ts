@@ -5,5 +5,5 @@ type ModelProps = {
 }
 
 export const ModelDiv = styled.div<ModelProps>`
-  background-color: ${({bg}) => bg ? bg : 'yellow' };
+  background-color: ${({bg}) => bg ? bg : 'red' };
 `
