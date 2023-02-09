@@ -3,7 +3,8 @@ name: Publish Beta
 on:
   push:
     branches:
-      - "qa"
+      - "*"
+      - '!master'
 permissions: write-all
 jobs:
   publish:
@@ -29,5 +30,4 @@ jobs:
           git config user.email "${{ github.actor}}@cybergenios.com.br"
           yarn
           npx lerna run tsc
-          npx lerna publish prepatch --preid dev --no-git-tag-version -y
-          git commit -am "new beta version"
+          lerna publish --canary --preid dev -y
