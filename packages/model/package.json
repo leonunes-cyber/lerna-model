@@ -4,9 +4,6 @@
   "version": "3.1.5",
   "private": false,
   "license": "MIT",
-  "repository": {
-    "url": "https://www.npmjs.com/package/@cyber_leo/model-test"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -23,6 +20,5 @@
   },
   "files": [
     "lib"
-  ],
-  "gitHead": "b7fc23d1bfc778d8cf559373388874a8ed715514"
+  ]
 }
