@@ -3,7 +3,8 @@ name: Publish Beta
 on:
   push:
     branches:
-      - "qa"
+      - "*"
+      - '!master'
 permissions: write-all
 jobs:
   publish:
