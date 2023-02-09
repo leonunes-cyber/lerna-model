@@ -6,5 +6,5 @@ type RemodelProps = {
 }
 
 export const SecondModel = ({secondName}: RemodelProps) => {
-  return <ModelDiv>Second wwModel {secondName}</ModelDiv>
+  return <ModelDiv>Second wwModelr {secondName}</ModelDiv>
 }
